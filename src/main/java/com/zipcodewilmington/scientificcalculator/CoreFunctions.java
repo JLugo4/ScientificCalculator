@@ -1,7 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class CoreFunctions {
-    private double currentValue = 0;
+    public double currentValue = 0;
 
     public double getCurrentValue() {
         return currentValue;
@@ -17,43 +17,49 @@ public class CoreFunctions {
         currentValue += num;
     }
 
-    CoreFunctions coreFunctions = new CoreFunctions();
-
-    public void add(double num1, double num2) {
-        currentValue += (num1 + num2);
+    public double add(double num1) {
+        currentValue += (num1);
+        return currentValue;
     }
 
-    public void subtract(double num1, double num2) {
-        currentValue -= (num1 - num2);
+    public double subtract(double num1) {
+        currentValue -= (num1);
+        return currentValue;
     }
 
-    public void multiply(double num1, double num2) {
-        currentValue *= (num1 * num2);
+    public double multiply(double num1) {
+
+        currentValue *= (num1);
+        return currentValue;
     }
 
-    public void divide(double num1, double num2) {
-        if(num2 ==0){
+    public double divide(double num1) {
+        if(num1 == 0){
             System.out.println("Err");
             clearDisplay();
         } else {
-            currentValue = num1 / num2;
+            currentValue /= num1;
         }
+        return currentValue;
     }
-    public double sqrRt(double num){
-      // currentValue = (Math.sqrt(num));
-        return (Math.sqrt(num));
+    public double sqrRt(){
+        currentValue = (Math.sqrt(currentValue));
+        return currentValue;
     }
-    public double sqrNum(double num){
-        return num * num;
+    public double sqrNum(){
+
+        return currentValue *= currentValue;
     }
-    public double exponent(double base, double exp){
-        return (int)Math.pow(base,exp);
+    public double exponent(double exp){
+        currentValue = Math.pow(currentValue, exp);
+        return (currentValue);
     }
-    public double inverse(double num){
-        return 1 / num;
+    public double inverse(){
+        return 1 / currentValue;
     }
-    public void invertSign(){
-        currentValue *= -1;
+    public double invertSign(){
+
+        return currentValue *= -1;
     }
     public void clearErr(){
         currentValue = 0;
