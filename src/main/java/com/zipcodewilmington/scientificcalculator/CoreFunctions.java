@@ -61,18 +61,10 @@ public class CoreFunctions {
 
         return currentValue *= -1;
     }
-    public void clearErr(){
+    /*public void clearErr(){
         currentValue = 0;
-        boolean error = false;
+        boolean error = false;*/
     }
-    /*public void divisionError(double num1, double num2){
-        try{
-            currentValue /= ( num1 / num2);
-        } catch (ArithmeticException e){
-            currentValue = 0;
-            System.out.println("Err" + e.getMessage());
-            setCurrentValue(Integer.MIN_VALUE);
-        }
-    } */
-}
+
+
 
